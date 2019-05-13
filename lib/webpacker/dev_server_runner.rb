@@ -28,7 +28,7 @@ module Webpacker
         @port              = dev_server.port
         @pretty            = dev_server.pretty?
 
-      rescue Errno::ENOENT, NoMethodError
+      rescue Errno::ENOENT
         $stdout.puts "webpack dev_server configuration not found in #{config.config_path}[#{ENV["RAILS_ENV"]}]."
         $stdout.puts "Please run bundle exec rails webpacker:install to install Webpacker"
         exit!
