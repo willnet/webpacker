@@ -5,7 +5,7 @@ require "webpacker/hash_ext"
 
 class Webpacker::Configuration
   attr_reader :root_path, :config_path, :env
-  using HashExt
+  using Webpacker::HashExt
 
   def initialize(root_path:, config_path:, env:)
     @root_path = root_path
